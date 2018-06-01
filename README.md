@@ -1,2 +1,9 @@
-# scrapy-algorithm
-Projekt Scrapy wraz ze spiderami do stron internetowych sklepow, z ktorych bedziemy brac produkty
+# Price comparison scripting 
+
+## sw prereq
+ * scrapy
+ * docker
+ * java 8+
+ * maven
+
+tbc.
