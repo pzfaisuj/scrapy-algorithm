@@ -14,3 +14,5 @@
 $ source activate algo_connect
 $ jupyter notebook
 ```
+Navigate to db_writer in jupyter notebook and open it.
+Run All to see the demo application
