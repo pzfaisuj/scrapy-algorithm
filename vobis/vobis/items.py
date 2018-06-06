@@ -8,7 +8,7 @@
 import scrapy
 
 
-class XkomItem(scrapy.Item):
+class VobisItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass

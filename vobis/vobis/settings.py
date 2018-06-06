@@ -1,25 +1,23 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for xkom project
+# Scrapy settings for saturn.pl
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
-#
 #     https://doc.scrapy.org/en/latest/topics/settings.html
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'xkom'
+BOT_NAME = 'vobis'
+# BOT_NAME = 'wheretobuy'
 
-SPIDER_MODULES = ['xkom.spiders']
-NEWSPIDER_MODULE = 'xkom.spiders'
-
+SPIDER_MODULES = ['vobis.spiders']
+NEWSPIDER_MODULE = 'vobis.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'xkom (+http://www.yourdomain.com)'
-
+# USER_AGENT = 'xkom (+ http://www.yourdomain.com)'
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+# ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
