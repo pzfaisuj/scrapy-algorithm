@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import scrapy
 
 
@@ -13,10 +14,11 @@ class EmpikSpider(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
-        page = response.url.split("/")[-1]
-        page = page.split(",")[0]
-        filename = 'empik-%s.html' % page
-        with open(filename, 'wb') as f:
-            f.write(response.body)
-        self.log('Saved file %s' % filename)
-
+        for empik_book in response.css("div.search-list-item"):
+            yield {
+                'author': empik_book.css("a.smartAuthor::text").extract_first().strip(),
+                'title': empik_book.css("a.seoTitle strong::text").extract_first().strip(),
+                'category': empik_book.css("span.productMainInfoSuffix::text").extract()[0].strip(),
+                'medium': empik_book.css("span.productMainInfoSuffix::text").extract()[1].strip(),
+                'price': empik_book.css("div.price::text").extract_first().encode('ascii', 'replace').strip()[:-3]
+            }
